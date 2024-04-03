@@ -1,4 +1,4 @@
-FROM binjoo/typecho2hexo:latest
+FROM binjoo/typecho2forever:latest
 
 COPY /entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
