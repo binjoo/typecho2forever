@@ -1,0 +1,27 @@
+name: action
+author: binjoo
+description: typecho data sync to hexo
+
+inputs:
+  path:
+    request: false
+    default: ./
+  url:
+    request: true
+  username:
+    request: true
+  password:
+    request: true
+
+runs:
+  using: docker
+  image: Dockerfile
+  env:
+    path: ${{ inputs.path }}
+    url: ${{ inputs.url }}
+    username: ${{ inputs.username }}
+    password: ${{ inputs.password }}
+
+branding:
+  icon: activity
+  color: green
