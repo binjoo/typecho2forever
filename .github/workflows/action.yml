@@ -5,11 +5,11 @@ on:
   workflow_dispatch:
 
 jobs:
-  comment:
-    name: typecho2forever action
+  action:
+    name: docker run
     runs-on: ubuntu-latest
     steps:
-      - name: Comment
+      - name: typecho2forever
         uses: binjoo/typecho2forever@master
         with:
           path: ${{ secrets.APP_PATH }}
