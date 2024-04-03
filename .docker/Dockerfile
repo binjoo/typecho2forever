@@ -1,4 +1,4 @@
-FROM adoptopenjdk/openjdk11:alpine
+FROM adoptopenjdk/openjdk17:alpine
 ADD ./target/typecho2forever-0.0.1-SNAPSHOT.jar app.jar
 ENTRYPOINT ["java", "-jar", "/app.jar"]
 RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
