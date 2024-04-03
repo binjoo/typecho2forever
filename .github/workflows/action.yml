@@ -1,0 +1,18 @@
+# .github/workflows/action.yml
+name: action
+
+on:
+  workflow_dispatch:
+
+jobs:
+  comment:
+    name: typecho2forever action
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comment
+        uses: binjoo/typecho2forever@master
+        with:
+          path: ${{ secrets.APP_PATH }}
+          url: ${{ secrets.APP_URL }}
+          username: ${{ secrets.APP_USERNAME }}
+          password: ${{ secrets.APP_PASSWORD }}
