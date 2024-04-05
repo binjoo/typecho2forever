@@ -17,8 +17,8 @@ public class TypechoMetaService {
     @Autowired
     private TypechoMetaRepository typechoMetaRepository;
 
-    public List<TypechoMeta> findByCid(Integer cid) {
-        return typechoMetaRepository.findByCid(cid);
+    public List<TypechoMeta> findByCidOrderByOrderAscByMidAsc(Integer cid) {
+        return typechoMetaRepository.findByCidOrderByOrderAscByMidAsc(cid);
     }
 
     public List<TypechoMeta> findByTypeOrderByOrderAsc(String type) {

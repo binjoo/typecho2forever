@@ -9,5 +9,5 @@ import java.util.List;
 
 @Repository
 public interface TypechoLinkRepository extends JpaRepository<TypechoLink, Integer>, JpaSpecificationExecutor<TypechoLink> {
-    public List<TypechoLink> findByMidOrderByOrderAsc(Integer mid);
+    List<TypechoLink> findByMidOrderByOrderAsc(Integer mid);
 }

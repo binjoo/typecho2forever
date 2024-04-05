@@ -33,7 +33,7 @@ public class CommentUtils {
             // comment.put("ua", UserAgentUtils.parseUserAgent(parent.getAgent()));
             comment.put("region", QQWryUtils.parseIp(parent.getIp()));
             comment.put("mailMd5", MD5Utils.encrypt(parent.getMail()));
-            comment.put("mod", parent.getOwnerId() == 1 ? true : false);
+            comment.put("mod", parent.getOwnerId() == 1);
 
             List<TypechoComment> childrens = items.stream().filter(c -> c.getParent().intValue() == parent.getCoid().intValue()).toList();
 

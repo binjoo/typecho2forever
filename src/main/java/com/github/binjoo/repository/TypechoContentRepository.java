@@ -9,9 +9,9 @@ import java.util.List;
 
 @Repository
 public interface TypechoContentRepository extends JpaRepository<TypechoContent, Integer>, JpaSpecificationExecutor<TypechoContent> {
-    public List<TypechoContent> findByTypeOrderByOrderAscCreatedAsc(String type);
+    List<TypechoContent> findByTypeOrderByOrderAscCreatedAsc(String type);
 
-    public List<TypechoContent> findByTypeOrderByCreatedDesc(String type);
+    List<TypechoContent> findByTypeOrderByCreatedDesc(String type);
 
-    public TypechoContent findBySlugAndType(String slug, String type);
+    TypechoContent findBySlugAndType(String slug, String type);
 }

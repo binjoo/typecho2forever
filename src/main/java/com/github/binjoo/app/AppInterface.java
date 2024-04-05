@@ -1,9 +1,9 @@
 package com.github.binjoo.app;
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 
 /**
  * @author liangj
@@ -21,7 +21,7 @@ public abstract class AppInterface {
         FileOutputStream fos = null;
         try {
             fos = new FileOutputStream(new File(fileName));
-            osw = new OutputStreamWriter(fos, "UTF-8");
+            osw = new OutputStreamWriter(fos, StandardCharsets.UTF_8);
             bw = new BufferedWriter(osw);
             bw.write(text);
         } catch (IOException e) {

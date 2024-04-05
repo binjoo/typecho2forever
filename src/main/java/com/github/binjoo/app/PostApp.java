@@ -48,7 +48,7 @@ public class PostApp extends AppInterface {
             String created = sdf.format(post.getCreated() * 1000);
             String modified = sdf.format(post.getModified() * 1000);
 
-            List<TypechoMeta> metas = typechoMetaService.findByCid(cid);
+            List<TypechoMeta> metas = typechoMetaService.findByCidOrderByOrderAscByMidAsc(cid);
 
             String[] tags = metas.stream().filter(m -> m.getType().equals("tag")).map(m -> m.getName()).toArray(size -> new String[size]);
             String[] categories = metas.stream().filter(m -> m.getType().equals("category")).map(m -> m.getName()).toArray(size -> new String[size]);

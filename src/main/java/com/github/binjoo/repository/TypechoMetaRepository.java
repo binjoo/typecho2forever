@@ -10,8 +10,8 @@ import java.util.List;
 
 @Repository
 public interface TypechoMetaRepository extends JpaRepository<TypechoMeta, Integer>, JpaSpecificationExecutor<TypechoMeta> {
-    @Query("select tm from TypechoMeta tm left join TypechoRelationship tr on tr.mid = tm.id where tr.cid = ?1 order by tm.order asc")
-    public List<TypechoMeta> findByCid(Integer cid);
+    @Query("select tm from TypechoMeta tm left join TypechoRelationship tr on tr.mid = tm.id where tr.cid = ?1 order by tm.order, tm.mid asc")
+    List<TypechoMeta> findByCidOrderByOrderAscByMidAsc(Integer cid);
 
-    public List<TypechoMeta> findByTypeOrderByOrderAsc(String type);
+    List<TypechoMeta> findByTypeOrderByOrderAsc(String type);
 }

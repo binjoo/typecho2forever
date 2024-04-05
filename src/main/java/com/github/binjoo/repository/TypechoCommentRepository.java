@@ -9,5 +9,5 @@ import java.util.List;
 
 @Repository
 public interface TypechoCommentRepository extends JpaRepository<TypechoComment, Integer>, JpaSpecificationExecutor<TypechoComment> {
-    public List<TypechoComment> findByCidOrderByCreatedAsc(Integer cid);
+    List<TypechoComment> findByCidOrderByCreatedAsc(Integer cid);
 }

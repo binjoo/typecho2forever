@@ -1,7 +1,6 @@
 package com.github.binjoo.app;
 
 import com.github.binjoo.model.entity.TypechoContent;
-import com.github.binjoo.model.entity.TypechoMeta;
 import com.github.binjoo.service.TypechoContentService;
 import com.github.binjoo.service.TypechoMetaService;
 import lombok.extern.slf4j.Slf4j;
@@ -9,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.io.File;
-import java.util.List;
 
 /**
  * @author liangj
@@ -40,8 +38,6 @@ public class PageApp extends AppInterface {
             String title = page.getTitle();
             String content = page.getText();
             content = content.substring("<!--markdown-->".length());
-
-            List<TypechoMeta> metas = typechoMetaService.findByCid(cid);
 
             String md = """
                     ---
