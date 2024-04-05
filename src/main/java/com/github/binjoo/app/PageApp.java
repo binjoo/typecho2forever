@@ -41,7 +41,6 @@ public class PageApp extends AppInterface {
 
             String md = """
                     ---
-                    type: page
                     id: %s
                     title: %s
                     layout: %s

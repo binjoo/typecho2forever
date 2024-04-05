@@ -55,7 +55,6 @@ public class PostApp extends AppInterface {
 
             String md = """
                     ---
-                    type: post
                     id: %s
                     title: %s
                     date: %s
